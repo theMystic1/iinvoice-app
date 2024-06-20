@@ -40,7 +40,7 @@ function RightNav({ session }) {
         </button>
         <div className="relative xl:w-10 h-10 xl:h-10 w-10 p-4 ">
           <Image
-            src={session.user.image ? session.user.image : profileImg}
+            src={session?.user.image ? session?.user.image : profileImg}
             alt="logo"
             fill
             className="object-cover object-top rounded-full"
