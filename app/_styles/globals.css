@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.accentPink.100");
+    border-right-color: theme("colors.accentPink.0");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    /* border: 2px solid theme("colors.primary.200"); */
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker */
+.rdp {
+  --rdp-cell-size: 32px !important;
+  /* --rdp-accent-color: theme("colors.accent.500") !important; */
+  /* --rdp-background-color: theme("colors.accent.600") !important; */
+  margin: 0 !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* 
+.rdp-day {
+  padding: 0.4rem;
+}
+
+.rdp-month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.rdp-caption {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 20px;
+} */
+
+/* .rdp-nav {
+  position: absolute;
+} */
+
+/* .rdp-nav_button_next {
+  position: absolute;
+
+  right: 0;
+}
+
+.rdp-nav_button_prev {
+  position: absolute;
+
+  left: 0;
+} */
+
+.rdp {
+  --rdp-cell-size: 40px !important;
+  --rdp-accent-color: transparent !important;
+  /* --rdp-background-color: theme("colors.accent.600") !important; */
+  --rdp-selected-color: theme("colors.accentPink.200") !important;
+  margin: 0 !important;
+}
