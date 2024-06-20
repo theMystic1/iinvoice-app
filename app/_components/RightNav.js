@@ -13,7 +13,7 @@ import Logout from "./Logout";
 function RightNav({ session }) {
   const { toggleDarkMode, isDarkMode } = useDarkMode();
 
-  console.log(session);
+  // console.log(session?.user.image);
 
   return (
     <div className="fixed left-0 xl:w-20 h-20 top-0 xl:bottom-0 flex xl:h-full xl:flex-col justify-between bg-accentPink-500 right-0 xl:rounded-r-[2em] xl:rounded-b-none z-50">
