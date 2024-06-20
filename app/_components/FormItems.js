@@ -143,7 +143,7 @@ function FormItems({ receipt, searchParams, status }) {
           item list
         </h3>
         {searchParams.type === "new" ? (
-          <FormGrid className="grid-cols-[1fr,1.5fr,1.5fr,.6fr] md:grid-cols-[1fr,60px,100px,100px,40px] gap-2">
+          <FormGrid className="grid-cols-[1.5fr,1fr] md:grid-cols-[1fr,60px,100px,100px,40px] gap-2">
             <div className=" md:flex">
               <Input label={"Item Name"} name="name" />
             </div>
@@ -177,7 +177,7 @@ function FormItems({ receipt, searchParams, status }) {
               />
             </div>
 
-            <FormGrid className="grid-cols-[1fr,1.5fr,1.5fr,.6fr] md:grid-cols-[1fr,60px,100px,100px,40px] gap-2">
+            <FormGrid className="grid-cols-[1.5fr,1fr]  md:grid-cols-[1fr,60px,100px,100px,40px] gap-2">
               <div className="hidden md:flex">
                 <Input
                   label={index === 0 ? "Item Name" : ""}
