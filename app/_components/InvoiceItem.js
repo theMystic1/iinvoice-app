@@ -64,7 +64,7 @@ export function InvoiceStatus({ status, children }) {
           : status === "paid"
           ? "bg-accents-paid-50 text-accents-paid-100"
           : "bg-accents-draft-50 text-accents-draft-100"
-      } p-3 flex items-center justify-center gap-2 text-2xl rounded-md capitalize w-32`}
+      } p-3 flex items-center justify-center gap-2 text-2xl rounded-md capitalize w-32 `}
     >
       <div
         className={`h-3 w-3 ${

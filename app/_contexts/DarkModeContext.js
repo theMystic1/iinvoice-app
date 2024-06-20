@@ -10,24 +10,23 @@ function DarkModeProvider({ children }) {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      const root = document.documentElement;
+
       if (isDarkMode) {
-        document.documentElement.classList.add("bg-darkMode-primary");
-        document.documentElement.classList.add("text-lightMode-primary");
-
-        document.documentElement.classList.remove("bg-lightMode-primary");
-        document.documentElement.classList.remove("text-lightMode-secondary");
+        root.classList.add("bg-darkMode-primary", "text-lightMode-primary");
+        root.classList.remove(
+          "bg-lightMode-primary",
+          "text-lightMode-secondary"
+        );
       } else {
-        document.documentElement.classList.add("bg-lightMode-primary");
-        document.documentElement.classList.add("text-lightMode-secondary");
-
-        document.documentElement.classList.remove("bg-darkMode-primary");
-        document.documentElement.classList.remove("text-lightMode-primary");
+        root.classList.add("bg-lightMode-primary", "text-lightMode-secondary");
+        root.classList.remove("bg-darkMode-primary", "text-lightMode-primary");
       }
     }
   }, [isDarkMode]);
 
   function toggleDarkMode() {
-    setIsDarkMode((isd) => !isd);
+    setIsDarkMode((prevMode) => !prevMode);
   }
 
   return (

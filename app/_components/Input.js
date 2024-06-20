@@ -11,6 +11,7 @@ function Input({
   cat,
   children,
   onClick,
+  className,
 }) {
   const { isDarkMode } = useDarkMode();
   return (
@@ -25,7 +26,9 @@ function Input({
           {children}
         </div>
       ) : cat === "p" ? (
-        <span className="text-accentPink-400 flex items-center h-[60px]  py-2">
+        <span
+          className={`text-accentPink-400 flex items-center h-[60px]  py-2 ${className}`}
+        >
           {children}
         </span>
       ) : (
