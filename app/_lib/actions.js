@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { formatDate, getReceiptById } from "./data-services";
 import { supabase } from "./supabase";
 import { headers } from "next/headers";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 import { auth, signIn, signOut } from "./auth";
 
 function generateRandomString(length) {
@@ -77,7 +77,6 @@ export async function createNewInvoice(formData) {
   const newData = await getFormata(formData);
 
   const { error } = await supabase.from("Invoices").insert([newData]);
-  // So that the newly created object gets returned!
 
   if (error) {
     console.error("Supabase error:", error);
@@ -85,11 +84,12 @@ export async function createNewInvoice(formData) {
   }
 
   revalidatePath("/");
+
+  // Correctly redirect using Next.js
   redirect("/");
 
-  // Redirect to the homepage
-
-  // Return some indication of success for the client to handle
+  // Return success indication for the client
+  return { success: true, message: "Invoice created successfully" };
 }
 
 export async function editInvoice(formData) {

@@ -23,7 +23,7 @@ function FormItems({ receipt, searchParams, status }) {
         isDarkMode
           ? "bg-darkMode-thirday"
           : "bg-lightMode-thirday absolute inset-0"
-      } rounded-r-lg px-4 md:px-6  pt-32 xl:pt-16 xl:pl-32 flex flex-col gap-8 pb-20 overflow-y-auto hide-scrollbar`}
+      } rounded-r-lg px-4 md:px-6  pt-32 xl:pt-16 xl:pl-32 flex flex-col gap-8 pb-24 overflow-y-auto hide-scrollbar`}
     >
       {searchParams.type === "edit" ? (
         <span className="text-2xl flex gap-2">
@@ -254,7 +254,7 @@ export function FooterBtn({ setStatus }) {
     <div
       className={`flex items-center gap-4 justify-between md:gap-4 ${
         isDarkMode ? "bg-darkMode-primary" : "bg-lightMode-thirday"
-      } w-full absolute bottom-0 px-4 md:px-6 pt-8 xl:pl-32`}
+      } w-full absolute bottom-0 px-4 md:px-6 pt-8 xl:pl-32 h-20`}
     >
       <Button type="button" onClick={handleClearQueryString}>
         Discard

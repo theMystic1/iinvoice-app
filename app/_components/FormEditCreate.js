@@ -40,7 +40,11 @@ function FormEditCreate({ searchParams, receipt }) {
         className={`min-h-screen w-full md:w-[80%]  lg:w-[60%] xl:w-[50%] rounded-r-lg fixed bottom-0 left-0 top-0 z-30  `}
         action={createNewInvoice}
       >
-        <FormItems receipt={receipt} searchParams={searchParams} />
+        <FormItems
+          receipt={receipt}
+          status={status}
+          searchParams={searchParams}
+        />
         <FooterBtn setStatus={setStatus} />
       </form>
     </div>
